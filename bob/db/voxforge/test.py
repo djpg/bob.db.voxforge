@@ -41,13 +41,13 @@ def test_query():
 
   assert len(db.objects(groups='world')) == 3148 # 3148 samples in the world set
 
-  assert len(db.objects(groups='dev', purposes='enrol')) == 1304 # 1304 samples for enrollment in the dev set
-  assert len(db.objects(groups='dev', purposes='enrol', model_ids='Dcoetzee')) == 240 # 240 samples to enroll model 'Dcoetzee' in the dev set
-  assert len(db.objects(groups='dev', purposes='enrol', model_ids='rortiz')) == 0 # 0 samples to enroll model 'rortiz' (it is an eval model)
+  assert len(db.objects(groups='dev', purposes='enroll')) == 1304 # 1304 samples for enrollment in the dev set
+  assert len(db.objects(groups='dev', purposes='enroll', model_ids='Dcoetzee')) == 240 # 240 samples to enroll model 'Dcoetzee' in the dev set
+  assert len(db.objects(groups='dev', purposes='enroll', model_ids='rortiz')) == 0 # 0 samples to enroll model 'rortiz' (it is an eval model)
   assert len(db.objects(groups='dev', purposes='probe')) == 300 # 300 samples as probes in the dev set
 
-  assert len(db.objects(groups='eval', purposes='enrol')) == 1509 # 1509 samples for enrollment in the eval set
-  assert len(db.objects(groups='eval', purposes='enrol', model_ids='rortiz')) == 120 # 120 samples to enroll model 'rortiz' in the eval set
-  assert len(db.objects(groups='eval', purposes='enrol', model_ids='Dcoetzee')) == 0 # 0 samples to enroll model 'Dcoetzee' (it is a dev model)
+  assert len(db.objects(groups='eval', purposes='enroll')) == 1509 # 1509 samples for enrollment in the eval set
+  assert len(db.objects(groups='eval', purposes='enroll', model_ids='rortiz')) == 120 # 120 samples to enroll model 'rortiz' in the eval set
+  assert len(db.objects(groups='eval', purposes='enroll', model_ids='Dcoetzee')) == 0 # 0 samples to enroll model 'Dcoetzee' (it is a dev model)
   assert len(db.objects(groups='eval', purposes='probe')) == 300 # 300 samples as probes in the eval set
 

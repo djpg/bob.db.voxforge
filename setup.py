@@ -53,6 +53,7 @@ setup(
     },
 
     classifiers = [
+      'Framework :: Bob',
       'Development Status :: 4 - Beta',
       'Intended Audience :: Education',
       'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
