@@ -19,10 +19,13 @@
 
 from setuptools import setup, find_packages
 
+# Define package version
+version = open("version.txt").read().rstrip()
+
 setup(
 
     name='bob.db.voxforge',
-    version='2.0.0a0',
+    version=version,
     description='Speaker verification protocol on a subset of the VoxForge database',
     url='http://pypi.python.org/pypi/bob.db.voxforge',
     license='GPLv3',
