@@ -28,7 +28,7 @@ fi
 baselink="http://www.repository.voxforge1.org/downloads/SpeechCorpus/Trunk/Audio/Main/16kHz_16bit"
 directory=$1
 
-mkdir -p $fulldirectory
+mkdir -p $directory
 while read filename; do
   basefilename=`basename $filename .tgz`
   echo $basefilename
