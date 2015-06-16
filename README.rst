@@ -6,7 +6,7 @@
    :target: http://pythonhosted.org/bob.db.voxforge/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.png
    :target: https://www.idiap.ch/software/bob/docs/latest/bioidiap/bob.db.voxforge/master/index.html
-.. image:: https://travis-ci.org/bioidiap/bob.db.voxforge.svg?branch=master
+.. image:: https://travis-ci.org/bioidiap/bob.db.voxforge.svg?branch=v2.0.2
    :target: https://travis-ci.org/bioidiap/bob.db.voxforge
 .. image:: https://coveralls.io/repos/bioidiap/bob.db.voxforge/badge.png
    :target: https://coveralls.io/r/bioidiap/bob.db.voxforge
