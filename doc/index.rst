@@ -18,9 +18,9 @@
 In this package, we design a speaker recognition protocol that uses a **small subset of the english audio files** (only 6561 files) belonging to **30 speakers** randomly selected.
 This subset is split into three equivalent parts: Training (10 speakers), Development (10 speakers) and Test (10 speakers) sets.
 
-This package serves as a toy example of speaker recognition database while testing :ref:`bob.spear <bob.spear>`.
+This package serves as a toy example of speaker recognition database while testing :ref:`bob.bio.spear <bob.bio.spear>`.
 
-:ref:`bob.spear <bob.spear>` is developed at Idiap_ during its participation to the `NIST SRE 2012 evaluation`_.
+:ref:`bob.bio.spear <bob.bio.spear>` is developed at Idiap_ during its participation to the `NIST SRE 2012 evaluation`_.
 If you use this package and/or its results, please cite the following publications:
 
 1. The original paper presented at the NIST SRE 2012 workshop:
@@ -55,11 +55,15 @@ If you use this package and/or its results, please cite the following publicatio
 Getting the data
 ----------------
 
-The original data can be downloaded directly from Voxforge_, or by running ``./scripts/download_and_untar.sh`` that takes as input the path in which the data will be stored:
+The original data can be downloaded directly from Voxforge_, or by running ``./bin/download_and_untar_voxforge.py`` which takes as input the path in which the data will be stored (using ``VOXFORGE_DATABSE`` as default)::
 
 .. code-block:: sh
 
-  $ ./scripts/download_and_untar.sh PATH/TO/WAV/DIRECTORY
+   $ ./bin/download_and_untar_voxforge.py PATH/TO/WAV/DIRECTORY
+
+.. note::
+   Running this script requires this package to be installed.
+   If you are using an installation strategy (such as ``pip``), the directory, where the script is placed, might differ.
 
 
 Documentation
@@ -82,5 +86,3 @@ Indices and tables
 .. _voxforge: http://www.voxforge.org
 .. _nist sre 2012 evaluation: http://www.nist.gov/itl/iad/mig/sre12.cfm
 .. _idiap: http://www.idiap.ch
-
-

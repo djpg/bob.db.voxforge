@@ -47,6 +47,11 @@ setup(
 
 
     entry_points = {
+      # scripts to download the database
+      'console_scripts' : [
+        'download_and_untar_voxforge.py = bob.db.voxforge.download_and_untar:main'
+      ],
+
       # declare database to bob
       'bob.db': [
         'voxforge = bob.db.voxforge.driver:Interface',

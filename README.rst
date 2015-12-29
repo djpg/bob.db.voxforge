@@ -37,9 +37,13 @@ Please make sure that you have read the `Dependencies <https://github.com/idiap/
 
 Getting the data
 ----------------
-The data can be downloaded from its original URL (on Voxforge), or by running ``./scripts/download_and_untar.sh``, which takes as input the path in which the data will be stored::
+The data can be downloaded from its original URL (on Voxforge), or by running ``./bin/download_and_untar_voxforge.py``, which takes as input the path in which the data will be stored (using ``VOXFORGE_DATABSE`` as default)::
 
-  $ ./scripts/download_and_untar.sh PATH/TO/WAV/DIRECTORY
+  $ ./bin/download_and_untar_voxforge.py PATH/TO/WAV/DIRECTORY
+
+.. note::
+   Running this script requires this package to be installed.
+   If you are using an installation strategy (such as ``pip``), the directory, where the script is placed, might differ.
 
 
 Documentation
@@ -50,5 +54,3 @@ For a list of tutorials on this or the other packages ob Bob_, or information on
 
 .. _bob: https://www.idiap.ch/software/bob
 .. _voxforge: http://www.voxforge.org
-
-
