@@ -7,7 +7,6 @@ matrix:
     - secure: Yfaf3JfZ7QWuEqOmExFD81KD0SDiAIB84x122zCYpcHCyqqAjWQw2v7+YBBR3F3m0sdMhrVuj/gBkmccEU/M3KLYR8jm9DiPfeenW2mdJwUBdcmM+9DCeYtnkZx8DYo3Uxpxi0WkvXmED6l6mkWHyPVSi3que9h1t3aOv/zt+2I=
     - BOB_DOCUMENTATION_SERVER=https://www.idiap.ch/software/bob/docs/latest/bioidiap/%s/master
     - BOB_UPLOAD_WHEEL="--universal"
-  - python: 3.3
   - python: 3.4
   - python: 3.5
 before_install:
@@ -19,7 +18,8 @@ before_install:
 - pip install --find-links https://www.idiap.ch/software/bob/wheels/travis/ --use-wheel --pre -r requirements.txt coveralls
 install:
 - python bootstrap-buildout.py
-- ./bin/buildout buildout:develop=. buildout:extensions=bob.buildout buildout:auto-checkout=
+- ./bin/buildout
+#- ./bin/buildout buildout:develop=. buildout:extensions=bob.buildout buildout:auto-checkout=
 script:
 - ./bin/python -c 'import pkg_resources; from bob.db.voxforge import get_config; print(get_config())'
 - ./bin/coverage run --source=bob.db.voxforge ./bin/nosetests -sv
