@@ -17,9 +17,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-import bob.db.verification.filelist
+import bob.db.bio_filelist
 
-class Database(bob.db.verification.filelist.Database):
+class Database(bob.db.bio_filelist.Database):
   """Wrapper class for the subVoxforge database for speaker recognition (http://www.voxforge.org/).
   this class defines a simple protocol for training, dev and and by splitting the audio files of the database in three main parts.
   """
@@ -28,5 +28,5 @@ class Database(bob.db.verification.filelist.Database):
     # call base class constructor
     from pkg_resources import resource_filename
     lists = resource_filename(__name__, 'lists')
-    bob.db.verification.filelist.Database.__init__(self, lists, original_directory = original_directory, original_extension = original_extension)
+    bob.db.bio_filelist.Database.__init__(self, lists, original_directory = original_directory, original_extension = original_extension)
 
