@@ -31,7 +31,7 @@ setup(
     name='bob.db.voxforge',
     version=version,
     description='Speaker verification protocol on a subset of the VoxForge database',
-    url='http://github.com/bioidiap/bob.db.voxforge',
+    url='http://gitlab.idiap.ch/bob/bob.db.voxforge',
     license='GPLv3',
     keywords = "Speaker Recognition, Speaker verification, Audio processing, Database, Voxforge",
     author='Elie Khoury',
