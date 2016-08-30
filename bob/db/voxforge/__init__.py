@@ -23,6 +23,7 @@ http://www.voxforge.org/
 """
 
 from .query import Database
+import bob.io.audio
 from bob.db.bio_filelist.models import File, Client
 
 def get_config():
