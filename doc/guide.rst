@@ -12,7 +12,7 @@ It only contains the Bob_ accessor methods to use the database directly from pyt
 The Database Interface
 ----------------------
 
-The :py:class:`bob.db.voxforge.Database` complies with the standard biometric verification database as described in `bob.db.base <bob.db.base>`, by implementing the  :py:class:`bob.db.verification.filelist.Database`.
+The :py:class:`bob.db.voxforge.Database` complies with the standard biometric verification database as described in `bob.db.base <bob.db.base>`, by implementing the  :py:class:`bob.db.base.Database`.
 
 
 .. todo::
