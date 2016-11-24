@@ -2,4 +2,5 @@ setuptools
 bob.io.base
 bob.io.audio
 bob.db.base
-bob.db.bio_filelist
+bob.bio.base
+bob.bio.spear

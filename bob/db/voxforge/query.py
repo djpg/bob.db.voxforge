@@ -17,16 +17,19 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-import bob.db.bio_filelist
+import bob.bio.base
+from bob.bio.spear.database import AudioBioFile
 
-class Database(bob.db.bio_filelist.Database):
+
+class Database(bob.bio.base.database.FileListBioDatabase):
   """Wrapper class for the subVoxforge database for speaker recognition (http://www.voxforge.org/).
   this class defines a simple protocol for training, dev and and by splitting the audio files of the database in three main parts.
   """
 
-  def __init__(self, original_directory = None, original_extension = None):
+  def __init__(self, original_directory=None, original_extension=None):
     # call base class constructor
     from pkg_resources import resource_filename
-    lists = resource_filename(__name__, 'lists')
-    bob.db.bio_filelist.Database.__init__(self, lists, original_directory = original_directory, original_extension = original_extension)
-
+    folder = resource_filename(__name__, 'lists')
+    super(Database, self).__init__(folder, 'voxforge', biofilecls=AudioBioFile,
+                                   original_directory=original_directory,
+                                   original_extension=original_extension)
