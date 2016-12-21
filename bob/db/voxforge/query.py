@@ -30,6 +30,6 @@ class Database(bob.bio.base.database.FileListBioDatabase):
     # call base class constructor
     from pkg_resources import resource_filename
     folder = resource_filename(__name__, 'lists')
-    super(Database, self).__init__(folder, 'voxforge', biofilecls=AudioBioFile,
+    super(Database, self).__init__(folder, 'voxforge', bio_file_class=AudioBioFile,
                                    original_directory=original_directory,
                                    original_extension=original_extension)
