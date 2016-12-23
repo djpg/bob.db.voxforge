@@ -21,33 +21,35 @@
 """
 
 import bob.db.voxforge
+from bob.bio.base.test.test_database_implementations import check_database
 
-def test_query():
-  db = bob.db.voxforge.Database()
 
-  assert len(db.client_ids()) == 30 # 10 client ids for world, dev and eval
-  assert len(db.client_ids(groups='world')) == 10 # 10 client ids for world
-  assert len(db.client_ids(groups='optional_world_1')) == 10 # 10 client ids for optional world 1
-  assert len(db.client_ids(groups='optional_world_2')) == 10 # 10 client ids for optional world 2
-  assert len(db.client_ids(groups='dev')) == 10 # 10 client ids for dev
-  assert len(db.client_ids(groups='eval')) == 10 # 10 client ids for eval
+def test_voxforge():
+    db = bob.bio.base.load_resource('voxforge', 'database', preferred_package='bob.db.voxforge')
+    check_database(db, groups=('dev', 'eval'))
 
-  assert len(db.model_ids()) == 30 # 30 model ids for world, dev and eval
-  assert len(db.model_ids(groups='world')) == 10 # 10 model ids for world
-  assert len(db.model_ids(groups='optional_world_1')) == 10 # 10 model ids for optional world 1
-  assert len(db.model_ids(groups='optional_world_2')) == 10 # 10 model ids for optional world 2
-  assert len(db.model_ids(groups='dev')) == 10 # 10 model ids for dev
-  assert len(db.model_ids(groups='eval')) == 10 # 10 model ids for eval
+    assert len(db.client_ids()) == 30  # 10 client ids for world, dev and eval
+    assert len(db.client_ids(groups='world')) == 10  # 10 client ids for world
+    assert len(db.client_ids(groups='optional_world_1')) == 10  # 10 client ids for optional world 1
+    assert len(db.client_ids(groups='optional_world_2')) == 10  # 10 client ids for optional world 2
+    assert len(db.client_ids(groups='dev')) == 10  # 10 client ids for dev
+    assert len(db.client_ids(groups='eval')) == 10  # 10 client ids for eval
 
-  assert len(db.objects(groups='world')) == 3148 # 3148 samples in the world set
+    assert len(db.model_ids(groups=None)) == 30  # 30 model ids for world, dev and eval
+    assert len(db.model_ids(groups='world')) == 10  # 10 model ids for world
+    assert len(db.model_ids(groups='optional_world_1')) == 10  # 10 model ids for optional world 1
+    assert len(db.model_ids(groups='optional_world_2')) == 10  # 10 model ids for optional world 2
+    assert len(db.model_ids(groups='dev')) == 10  # 10 model ids for dev
+    assert len(db.model_ids(groups='eval')) == 10  # 10 model ids for eval
 
-  assert len(db.objects(groups='dev', purposes='enroll')) == 1304 # 1304 samples for enrollment in the dev set
-  assert len(db.objects(groups='dev', purposes='enroll', model_ids='Dcoetzee')) == 240 # 240 samples to enroll model 'Dcoetzee' in the dev set
-  assert len(db.objects(groups='dev', purposes='enroll', model_ids='rortiz')) == 0 # 0 samples to enroll model 'rortiz' (it is an eval model)
-  assert len(db.objects(groups='dev', purposes='probe')) == 300 # 300 samples as probes in the dev set
+    assert len(db.objects(groups='world')) == 3148  # 3148 samples in the world set
 
-  assert len(db.objects(groups='eval', purposes='enroll')) == 1509 # 1509 samples for enrollment in the eval set
-  assert len(db.objects(groups='eval', purposes='enroll', model_ids='rortiz')) == 120 # 120 samples to enroll model 'rortiz' in the eval set
-  assert len(db.objects(groups='eval', purposes='enroll', model_ids='Dcoetzee')) == 0 # 0 samples to enroll model 'Dcoetzee' (it is a dev model)
-  assert len(db.objects(groups='eval', purposes='probe')) == 300 # 300 samples as probes in the eval set
+    assert len(db.objects(groups='dev', purposes='enroll')) == 1304  # 1304 samples for enrollment in the dev set
+    assert len(db.objects(groups='dev', purposes='enroll', model_ids='Dcoetzee')) == 240  # 240 samples to enroll model 'Dcoetzee' in the dev set
+    assert len(db.objects(groups='dev', purposes='enroll', model_ids='rortiz')) == 0  # 0 samples to enroll model 'rortiz' (it is an eval model)
+    assert len(db.objects(groups='dev', purposes='probe')) == 300  # 300 samples as probes in the dev set
 
+    assert len(db.objects(groups='eval', purposes='enroll')) == 1509  # 1509 samples for enrollment in the eval set
+    assert len(db.objects(groups='eval', purposes='enroll', model_ids='rortiz')) == 120  # 120 samples to enroll model 'rortiz' in the eval set
+    assert len(db.objects(groups='eval', purposes='enroll', model_ids='Dcoetzee')) == 0  # 0 samples to enroll model 'Dcoetzee' (it is a dev model)
+    assert len(db.objects(groups='eval', purposes='probe')) == 300  # 300 samples as probes in the eval set

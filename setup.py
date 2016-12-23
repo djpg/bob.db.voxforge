@@ -33,22 +33,22 @@ setup(
     description='Speaker verification protocol on a subset of the VoxForge database',
     url='http://gitlab.idiap.ch/bob/bob.db.voxforge',
     license='BSD',
-    keywords = "Speaker Recognition, Speaker verification, Audio processing, Database, Voxforge",
+    keywords="Speaker Recognition, Speaker verification, Audio processing, Database, Voxforge",
     author='Elie Khoury',
     author_email='Elie.Khoury@idiap.ch',
     long_description=open('README.rst').read(),
 
     packages=find_packages(),
     include_package_data=True,
-    zip_safe = False,
+    zip_safe=False,
 
-    install_requires = install_requires,
+    install_requires=install_requires,
 
 
 
-    entry_points = {
+    entry_points={
       # scripts to download the database
-      'console_scripts' : [
+      'console_scripts': [
         'download_and_untar_voxforge.py = bob.db.voxforge.download_and_untar:main'
       ],
 
@@ -56,9 +56,14 @@ setup(
       'bob.db': [
         'voxforge = bob.db.voxforge.driver:Interface',
       ],
+
+      'bob.bio.database': [
+        'voxforge = bob.db.voxforge.config:database',
+      ],
+
     },
 
-    classifiers = [
+    classifiers=[
       'Framework :: Bob',
       'Development Status :: 4 - Beta',
       'Intended Audience :: Education',
