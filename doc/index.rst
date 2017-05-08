@@ -55,11 +55,11 @@ If you use this package and/or its results, please cite the following publicatio
 Getting the data
 ----------------
 
-The original data can be downloaded directly from Voxforge_, or by running ``./bin/download_and_untar_voxforge.py`` which takes as input the path in which the data will be stored (using ``VOXFORGE_DATABSE`` as default)::
+The original data can be downloaded directly from Voxforge_, or by running ``download_and_untar_voxforge.py`` which takes as input the path in which the data will be stored (using ``VOXFORGE_DATABSE`` as default)::
 
 .. code-block:: sh
 
-   $ ./bin/download_and_untar_voxforge.py PATH/TO/WAV/DIRECTORY
+   $ download_and_untar_voxforge.py PATH/TO/WAV/DIRECTORY
 
 .. note::
    Running this script requires this package to be installed.
