@@ -29,7 +29,7 @@ Voxforge offers a collection of transcribed speech for use with Free and Open So
 Installation
 ------------
 
-Complete Bob's `installation`_ instructions. Then, to install this pacakge,
+Complete Bob's `installation`_ instructions. Then, to install this package,
 run::
 
   $ conda install bob.db.voxforge
