@@ -13,8 +13,6 @@
    :target: https://gitlab.idiap.ch/bob/bob.db.voxforge
 .. image:: http://img.shields.io/pypi/v/bob.db.voxforge.svg
    :target: https://pypi.python.org/pypi/bob.db.voxforge
-.. image:: http://img.shields.io/pypi/dm/bob.db.voxforge.svg
-   :target: https://pypi.python.org/pypi/bob.db.voxforge
 
 
 ========================================
