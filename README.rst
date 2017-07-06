@@ -2,9 +2,9 @@
 .. Tue 16 Aug 11:58:23 CEST 2016
 
 .. image:: http://img.shields.io/badge/docs-stable-yellow.svg
-   :target: http://pythonhosted.org/bob.db.voxforge/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bob/bob.db.voxforge/stable/index.html
 .. image:: http://img.shields.io/badge/docs-latest-orange.svg
-   :target: https://www.idiap.ch/software/bob/docs/latest/bioidiap/bob.db.voxforge/master/index.html
+   :target: https://www.idiap.ch/software/bob/docs/bioidiap/bob.db.voxforge/master/index.html
 .. image:: https://gitlab.idiap.ch/bob/bob.db.voxforge/badges/master/build.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.voxforge/commits/master
 .. image:: https://gitlab.idiap.ch/bob/bob.db.voxforge/badges/master/coverage.svg
@@ -12,8 +12,6 @@
 .. image:: https://img.shields.io/badge/gitlab-project-0000c0.svg
    :target: https://gitlab.idiap.ch/bob/bob.db.voxforge
 .. image:: http://img.shields.io/pypi/v/bob.db.voxforge.svg
-   :target: https://pypi.python.org/pypi/bob.db.voxforge
-.. image:: http://img.shields.io/pypi/dm/bob.db.voxforge.svg
    :target: https://pypi.python.org/pypi/bob.db.voxforge
 
 
@@ -29,7 +27,7 @@ Voxforge offers a collection of transcribed speech for use with Free and Open So
 Installation
 ------------
 
-Complete Bob's `installation`_ instructions. Then, to install this pacakge,
+Complete Bob's `installation`_ instructions. Then, to install this package,
 run::
 
   $ conda install bob.db.voxforge
