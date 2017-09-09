@@ -24,7 +24,7 @@ http://www.voxforge.org/
 
 from .query import Database
 import bob.io.audio
-from bob.bio.base.database.filelist.models import FileListFile, Client
+from bob.bio.base.database.filelist.models import FileListFile
 
 def get_config():
   """Returns a string containing the configuration information.
