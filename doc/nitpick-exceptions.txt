@@ -1,3 +1,4 @@
 py:class sqlalchemy.ext.declarative.api.Base
 py:class BioFile
 py:exc ValueError
+py:obj bob.db.voxforge.FileListFile:None
