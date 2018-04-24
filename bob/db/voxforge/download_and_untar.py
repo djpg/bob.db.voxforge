@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+
+
 def main():
 
   import pkg_resources
@@ -25,9 +27,14 @@ def main():
   else:
     import urllib.request as urllib
   import tarfile
+  import argparse
+  parser = argparse.ArgumentParser(description='Download and extract the Voxforge database.')
+  parser.add_argument("--address", default="VOXFORGE_DATABASE", help="Where downloaded archives will be placed. Default is 'VOXFORGE_DATABASE' folder.")
+  args = parser.parse_args()
 
+  
 
-  directory = sys.argv[1] if len(sys.argv) > 1 else "VOXFORGE_DATABASE"
+  directory = args.address
   if not os.path.exists(directory):
     print ("Creating intermediate directory '%s', where downloaded archives will be placed" % directory)
     os.makedirs(directory)
@@ -66,3 +73,4 @@ def main():
       finally:
         # TODO: should we leave possibly broken files here, so that it can be inspected later?
         os.remove(tempfile)
+
