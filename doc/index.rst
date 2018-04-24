@@ -59,7 +59,7 @@ The original data can be downloaded directly from Voxforge_, or by running ``dow
 
 .. code-block:: sh
 
-   $ download_and_untar_voxforge.py PATH/TO/WAV/DIRECTORY
+   $ download_and_untar_voxforge.py --address PATH/TO/WAV/DIRECTORY
 
 .. note::
    Running this script requires this package to be installed.
